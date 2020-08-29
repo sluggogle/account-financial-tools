@@ -51,7 +51,6 @@ class WizardRenumber(models.TransientModel):
         """Today by default."""
         return fields.Date.from_string(fields.Date.context_today(self))
 
-    @api.multi
     def renumber(self):
         """Renumber all the posted moves on the given journal and periods.
 
